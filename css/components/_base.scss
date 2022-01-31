@@ -2,6 +2,7 @@
 $primary-red: #f53838;
 $back-red: #ffecec;
 $back-card: #f8f8f8;
+$background-color: #f6f6f6;
 
 *,
 *::after,
@@ -32,7 +33,7 @@ html {
 
 	@include respond(phone) {
 		// *1 rem : 6px 600px
-		font-size: 37.5%;
+		font-size: 37%;
 	}
 }
 
@@ -45,7 +46,7 @@ body {
 
 .container {
 	display: grid;
-	grid-template-columns: minmax(3rem, 1fr) repeat(8, minmax(min-content, 15rem)) minmax(3rem, 1fr);
+	grid-template-columns: minmax(2rem, 1fr) repeat(6, minmax(min-content, 1fr)) minmax(2rem, 1fr);
 	grid-template-rows: minmax(6rem, 8rem) max-content max-content max-content;
 	grid-auto-rows: max-content;
 }
