@@ -85,6 +85,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 20rem;
+  background-image: url("../../Assets/Logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .navbar_options {
@@ -141,6 +145,13 @@ body {
   border: 2px solid black;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .navbar_login .login_btn {
+    display: none;
+    opacity: 0;
+  }
 }
 
 .navbar_login .login_btn:hover {
@@ -201,7 +212,7 @@ body {
 }
 
 .world_img {
-  height: 40vw;
+  height: 38.5vw;
 }
 
 .cards {
@@ -349,8 +360,8 @@ body {
 
 .footer {
   -ms-grid-column: 2;
-  -ms-grid-column-span: 8;
-  grid-column: 2 / 10;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
   -ms-grid-row: 9;
   -ms-grid-row-span: 1;
   grid-row: 9 / 10;
@@ -500,6 +511,12 @@ body {
           justify-content: space-evenly;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .infos {
+    padding-bottom: 1.5rem;
+  }
+}
+
 .infos .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,18 +534,42 @@ body {
   border-radius: 1rem;
 }
 
-.infos .info_paragraph {
-  font-size: 1.5rem;
-  margin-right: 1rem;
+@media only screen and (max-width: 37.5em) {
+  .infos .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
-.infos .info img {
+.infos .info_paragraph {
+  font-size: 1.5rem;
+  margin-left: 0;
+}
+
+.infos .info_img {
   margin: 2rem;
   padding: 5px;
-  height: 50%;
   border-radius: 100px;
   shape-outside: circle(50% at 50% 50%);
-  border: 2px solid rgba(245, 56, 56, 0.5);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .infos .info_img > img {
+    height: 6rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .infos .info_img {
+    padding: 0;
+    border: none;
+    margin: 1rem;
+  }
+  .infos .info_img > img {
+    height: 6rem;
+  }
 }
 
 .heading-tertiary {
@@ -619,6 +660,12 @@ body {
   padding: 0rem 8rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .description .content-box {
+    padding: 0rem 4rem;
+  }
+}
+
 .description .content-box > * {
   margin-bottom: 2rem;
 }
@@ -665,6 +712,12 @@ body {
   margin: 1rem;
 }
 
+.description .content-box-list_item::before {
+  margin: 0 1rem;
+  content: url("../Assets/tick.svg");
+  display: inline;
+}
+
 .cards-heading {
   -ms-grid-column: 2;
   -ms-grid-column-span: 6;
@@ -687,6 +740,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
 .cards-heading > * {
@@ -695,6 +749,12 @@ body {
 
 .cards-heading .paragraph {
   font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .cards-heading {
+    padding: 2rem 0 0 0;
+  }
 }
 
 .world-heading {
@@ -706,6 +766,7 @@ body {
   grid-row: 7 / 8;
   margin-top: 5rem;
   padding: 5rem 5rem 0 5rem;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -727,6 +788,12 @@ body {
 
 .world-heading .paragraph {
   font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .world-heading {
+    padding: 2rem 0 0 0;
+  }
 }
 
 .heading-tertiary {

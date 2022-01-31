@@ -12,6 +12,11 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		// height: 10rem;
+		width: 20rem;
+		background-image: url('../../Assets/Logo.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
 	}
 
 	&_options {
@@ -49,6 +54,11 @@
 			position: relative;
 			border: 2px solid black;
 			transition: all 0.3s ease-in;
+
+			@include respond(phone) {
+				display: none;
+				opacity: 0;
+			}
 
 			&:hover {
 				color: white;

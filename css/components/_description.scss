@@ -50,6 +50,10 @@
 		align-items: flex-start;
 		padding: 0rem 8rem;
 
+		@include respond(phone) {
+			padding: 0rem 4rem;
+		}
+
 		& > * {
 			margin-bottom: 2rem;
 		}
@@ -78,10 +82,11 @@
 				align-items: center;
 				margin: 1rem;
 
-				// &::before {
-				// 	content: url('../../Assets/jam_check.svg');
-				// 	display: inline;
-				// }
+				&::before {
+					margin: 0 1rem;
+					content: url('../Assets/tick.svg');
+					display: inline;
+				}
 			}
 		}
 	}
