@@ -662,11 +662,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.description .content-box-list_item::before {
-  content: url("../../Assets/jam_check.svg");
-  display: inline;
+  margin: 1rem;
 }
 
 .cards-heading {

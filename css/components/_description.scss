@@ -76,11 +76,12 @@
 				flex-direction: row;
 				justify-content: center;
 				align-items: center;
+				margin: 1rem;
 
-				&::before {
-					content: url('../../Assets/jam_check.svg');
-					display: inline;
-				}
+				// &::before {
+				// 	content: url('../../Assets/jam_check.svg');
+				// 	display: inline;
+				// }
 			}
 		}
 	}
