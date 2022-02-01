@@ -9,18 +9,17 @@
 	// 	rgba($color: white, $alpha: 1)
 	// );
 	// background-color: $back-card;
-	padding: 5rem;
+	padding: 3rem;
 
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-	column-gap: 5rem;
-	row-gap: 5rem;
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	gap: 1rem;
 }
 
 .card {
 	// height: auto;
 	border-radius: 3rem;
-	padding: 4rem 0;
+	padding: 4rem 1rem;
 	margin: 2rem;
 	display: flex;
 	flex-direction: column;
@@ -43,7 +42,7 @@
 	&:hover {
 		border: 2px solid rgba($color: $primary-red, $alpha: 1);
 		box-shadow: 0 1.5rem 4rem rgba($color: $primary-red, $alpha: 0.2);
-		transform: scale(1.04);
+		// transform: scale(1.02);
 	}
 
 	& > * {
@@ -77,13 +76,18 @@
 		}
 
 		&_item {
-			font-size: 1.4rem;
+			font-size: 1.6rem;
 			text-transform: capitalize;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
 			margin-bottom: 1rem;
+
+			// &_tick {
+			// 	color: black;
+			// 	background-image: url('../../Assets/jam_check.svg');
+			// }
 
 			// &::before {
 			// 	content: url('../../Assets/jam_check.svg');

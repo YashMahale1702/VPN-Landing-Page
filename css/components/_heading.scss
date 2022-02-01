@@ -47,6 +47,7 @@
 		padding: 2rem 0 0 0;
 	}
 }
+
 .customer-heading {
 	grid-column: 2 / 8;
 	grid-row: 9 / 10;
@@ -94,16 +95,13 @@
 		font-weight: 600;
 		transition: all 0.3s ease;
 		transform-origin: center;
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		background-image: linear-gradient(60deg, #e21143, #ffb03a);
 
 		// background: linear-gradient(rgba($color: black, $alpha: 1), rgba($color: black, $alpha: 1));
 		// background-clip: text;
 		// -webkit-text-fill-color: transparent;
-
-		// &:hover {
-		// 	border-bottom: 2px solid $back-red;
-		// 	background: linear-gradient(rgba($color: $primary-red, $alpha: 1), rgba($color: $primary-red, $alpha: 0.6));
-		// 	background-clip: text;
-		// 	-webkit-text-fill-color: transparent;
-		// }
 	}
 }
