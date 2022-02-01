@@ -362,10 +362,12 @@ body {
   -ms-grid-column: 2;
   -ms-grid-column-span: 6;
   grid-column: 2 / 8;
-  -ms-grid-row: 9;
+  -ms-grid-row: 11;
   -ms-grid-row-span: 1;
-  grid-row: 9 / 10;
+  grid-row: 11 / 12;
   background-color: orange;
+  height: 2rem;
+  padding: 5rem;
 }
 
 .header {
@@ -796,6 +798,45 @@ body {
   }
 }
 
+.customer-heading {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+  -ms-grid-row: 9;
+  -ms-grid-row-span: 1;
+  grid-row: 9 / 10;
+  margin-top: 2rem;
+  padding: 5rem 5rem 0 5rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customer-heading > * {
+  padding-bottom: 2rem;
+}
+
+.customer-heading .paragraph {
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .customer-heading {
+    padding: 2rem 0 0 0;
+  }
+}
+
 .heading-tertiary {
   font-size: 3rem;
   font-weight: 500;
@@ -821,5 +862,121 @@ body {
   transition: all 0.3s ease;
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+.customer-cards {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2 / 8;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 1;
+  grid-row: 10 / 11;
+  width: 100%;
+  margin: 3rem auto;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(28rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 1.5rem;
+}
+
+.customer-card {
+  border-radius: 1rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: white;
+  border: 2px solid rgba(128, 128, 128, 0.3);
+}
+
+.customer-card .row-first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.customer-card .row-first > img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 100px;
+  shape-outside: circle(50% at 50% 50%);
+  margin: 1rem;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.customer-card .row-first .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 auto 0 1rem;
+}
+
+.customer-card .row-first .name-second {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.customer-card .row-first .rating {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  font-size: 1.4rem;
+}
+
+.customer-card .row-second {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 /*# sourceMappingURL=style.css.map */
