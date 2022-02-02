@@ -6,16 +6,24 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+
+	&_menu {
+		height: 1.2rem;
+		display: none;
+		opacity: 0;
+
+		@include respond(tab-port) {
+			display: inline;
+			opacity: 100%;
+		}
+	}
 
 	&_logo {
-		background-size: cover;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		// height: 10rem;
+		height: 6rem;
 		width: 20rem;
 		background-image: url('../Assets/Logo.svg');
-		background-size: contain;
+		background-size: 100%;
 		background-repeat: no-repeat;
 	}
 
@@ -23,6 +31,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
 
 		a {
 			padding: 1rem;
@@ -31,6 +40,15 @@
 			opacity: 0.8;
 			outline: none;
 			text-decoration: none;
+
+			&:hover {
+				color: $primary-red;
+			}
+		}
+
+		@include respond(tab-port) {
+			display: none;
+			opacity: 0;
 		}
 	}
 
@@ -45,14 +63,13 @@
 			border-radius: 40rem;
 			background-color: white;
 			color: black;
-			border: 2px solid white;
-			padding: 0.5rem 2rem;
+			padding: 0.6rem 2rem;
 			text-decoration: none;
 			font-size: 1.6rem;
 			font-weight: 500;
 			transform-origin: center;
 			position: relative;
-			border: 2px solid black;
+			// border: 2px solid black;
 			transition: all 0.3s ease-in;
 
 			@include respond(phone) {
@@ -63,7 +80,7 @@
 			&:hover {
 				color: white;
 				background-color: black;
-				box-shadow: 0 1rem 4rem rgba($color: black, $alpha: 0.3);
+				box-shadow: 0 1rem 4rem rgba($color: black, $alpha: 0.1);
 			}
 		}
 
@@ -71,8 +88,8 @@
 			border-radius: 40rem;
 			background-color: white;
 			color: $primary-red;
-			border: 2px solid $primary-red;
-			padding: 0.5rem 2rem;
+			border: 3px solid $primary-red;
+			padding: 0.6rem 2rem;
 			text-decoration: none;
 			font-size: 1.6rem;
 			font-weight: 500;
@@ -81,7 +98,7 @@
 			&:hover {
 				color: white;
 				background-color: $primary-red;
-				box-shadow: 0 1rem 4rem rgba($color: $primary-red, $alpha: 0.3);
+				box-shadow: 0 1rem 4rem rgba($color: $primary-red, $alpha: 0.1);
 			}
 		}
 	}

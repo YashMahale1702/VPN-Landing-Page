@@ -44,9 +44,9 @@ body {
 .container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(2rem, 1fr) (minmax(min-content, 1fr))[6] minmax(2rem, 1fr);
-      grid-template-columns: minmax(2rem, 1fr) repeat(6, minmax(-webkit-min-content, 1fr)) minmax(2rem, 1fr);
-      grid-template-columns: minmax(2rem, 1fr) repeat(6, minmax(min-content, 1fr)) minmax(2rem, 1fr);
+  -ms-grid-columns: minmax(2rem, 0.5fr) (minmax(min-content, 1fr))[6] minmax(2rem, 0.5fr);
+      grid-template-columns: minmax(2rem, 0.5fr) repeat(6, minmax(-webkit-min-content, 1fr)) minmax(2rem, 0.5fr);
+      grid-template-columns: minmax(2rem, 0.5fr) repeat(6, minmax(min-content, 1fr)) minmax(2rem, 0.5fr);
   -ms-grid-rows: minmax(6rem, 8rem) max-content max-content max-content;
       grid-template-rows: minmax(6rem, 8rem) -webkit-max-content -webkit-max-content -webkit-max-content;
       grid-template-rows: minmax(6rem, 8rem) max-content max-content max-content;
@@ -84,22 +84,29 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.navbar_logo {
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.navbar_menu {
+  height: 1.2rem;
+  display: none;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 58em) {
+  .navbar_menu {
+    display: inline;
+    opacity: 100%;
+  }
+}
+
+.navbar_logo {
+  height: 6rem;
   width: 20rem;
   background-image: url("../Assets/Logo.svg");
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
 }
 
@@ -114,6 +121,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .navbar_options a {
@@ -123,6 +133,17 @@ body {
   opacity: 0.8;
   outline: none;
   text-decoration: none;
+}
+
+.navbar_options a:hover {
+  color: #f53838;
+}
+
+@media only screen and (max-width: 58em) {
+  .navbar_options {
+    display: none;
+    opacity: 0;
+  }
 }
 
 .navbar_login {
@@ -146,15 +167,13 @@ body {
   border-radius: 40rem;
   background-color: white;
   color: black;
-  border: 2px solid white;
-  padding: 0.5rem 2rem;
+  padding: 0.6rem 2rem;
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 500;
   -webkit-transform-origin: center;
           transform-origin: center;
   position: relative;
-  border: 2px solid black;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -169,16 +188,16 @@ body {
 .navbar_login .login_btn:hover {
   color: white;
   background-color: black;
-  -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
 }
 
 .navbar_login .signup_btn {
   border-radius: 40rem;
   background-color: white;
   color: #f53838;
-  border: 2px solid #f53838;
-  padding: 0.5rem 2rem;
+  border: 3px solid #f53838;
+  padding: 0.6rem 2rem;
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 500;
@@ -189,8 +208,8 @@ body {
 .navbar_login .signup_btn:hover {
   color: white;
   background-color: #f53838;
-  -webkit-box-shadow: 0 1rem 4rem rgba(245, 56, 56, 0.3);
-          box-shadow: 0 1rem 4rem rgba(245, 56, 56, 0.3);
+  -webkit-box-shadow: 0 1rem 4rem rgba(245, 56, 56, 0.1);
+          box-shadow: 0 1rem 4rem rgba(245, 56, 56, 0.1);
 }
 
 .world {
@@ -406,7 +425,7 @@ body {
 }
 
 .footer-first > * {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .footer-first > img {
@@ -441,18 +460,14 @@ body {
 .footer-second > .btn {
   border: none;
   outline: none;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   color: #f53838;
-  margin: 1rem;
+  background-color: #f6f6f6;
+  text-align: start;
+  margin: 0.5rem;
   border-radius: 1rem;
   padding: 1rem 2rem;
   cursor: pointer;
-  background-color: white;
-}
-
-.footer-second > .btn:hover {
-  color: white;
-  background-color: #f53838;
 }
 
 .header {

@@ -19,7 +19,7 @@
 		align-items: flex-start;
 
 		& > * {
-			margin-bottom: 2rem;
+			margin-bottom: 1rem;
 		}
 
 		& > img {
@@ -47,18 +47,14 @@
 		& > .btn {
 			border: none;
 			outline: none;
-			font-size: 1.6rem;
+			font-size: 1.4rem;
 			color: $primary-red;
-			margin: 1rem;
+			background-color: $background-color;
+			text-align: start;
+			margin: 0.5rem;
 			border-radius: 1rem;
 			padding: 1rem 2rem;
 			cursor: pointer;
-			background-color: white;
-
-			&:hover {
-				color: white;
-				background-color: $primary-red;
-			}
 		}
 	}
 }
