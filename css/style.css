@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 @media only screen and (min-width: 112.5em) {
@@ -133,10 +134,33 @@ body {
   opacity: 0.8;
   outline: none;
   text-decoration: none;
+  position: relative;
 }
 
 .navbar_options a:hover {
   color: #f53838;
+}
+
+.navbar_options a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.navbar_options a::after {
+  content: '';
+  background-image: -webkit-gradient(linear, left top, right top, from(#f53838), to(#d57eeb));
+  background-image: linear-gradient(to right, #f53838, #d57eeb);
+  position: absolute;
+  height: 1.5px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 @media only screen and (max-width: 58em) {
@@ -174,8 +198,10 @@ body {
   -webkit-transform-origin: center;
           transform-origin: center;
   position: relative;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  background-size: 220%;
+  background-image: linear-gradient(115deg, transparent 0%, transparent 50%, black 50%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -185,11 +211,9 @@ body {
   }
 }
 
-.navbar_login .login_btn:hover {
+.navbar_login .login_btn:hover, .navbar_login .login_btn:active {
+  background-position: 100%;
   color: white;
-  background-color: black;
-  -webkit-box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.1);
 }
 
 .navbar_login .signup_btn {
@@ -201,15 +225,15 @@ body {
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 500;
-  -webkit-transition: all 0.3s ease-in;
-  transition: all 0.3s ease-in;
+  background-size: 220%;
+  background-image: linear-gradient(115deg, transparent 0%, transparent 50%, #f53838 50%);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
 }
 
-.navbar_login .signup_btn:hover {
+.navbar_login .signup_btn:hover, .navbar_login .signup_btn:active {
+  background-position: 100%;
   color: white;
-  background-color: #f53838;
-  -webkit-box-shadow: 0 1rem 4rem rgba(245, 56, 56, 0.1);
-          box-shadow: 0 1rem 4rem rgba(245, 56, 56, 0.1);
 }
 
 .world {
@@ -952,10 +976,11 @@ body {
   font-weight: 400;
   text-transform: capitalize;
   line-height: 1.6;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .primary-heading span {
-  border-bottom: 2px solid #f53838;
   font-weight: 600;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -965,6 +990,29 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   background-image: linear-gradient(60deg, #e21143, #ffb03a);
+  position: relative;
+}
+
+.primary-heading span:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.primary-heading span::after {
+  content: '';
+  background-image: -webkit-gradient(linear, left top, right top, from(#f53838), to(#d57eeb));
+  background-image: linear-gradient(to right, #f53838, #d57eeb);
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .customer-cards {
@@ -1138,21 +1186,21 @@ body {
   margin-right: 2rem;
 }
 
-.subscribe-heading-first {
+.subscribe-heading_first {
   font-size: 2rem;
   font-weight: 600;
   padding: 1rem 0;
 }
 
-.subscribe-heading-second {
+.subscribe-heading_second {
   font-size: 1.6rem;
   font-weight: 400;
 }
 
-.subscribe-btn {
+.subscribe_btn {
   margin: 1.5rem 0;
   font-weight: 400;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   text-decoration: none;
   text-transform: capitalize;
   color: white;
@@ -1169,7 +1217,7 @@ body {
           backface-visibility: hidden;
 }
 
-.subscribe-btn:hover {
+.subscribe_btn:hover {
   -webkit-box-shadow: 0 0 0 white;
           box-shadow: 0 0 0 white;
   background-color: white;

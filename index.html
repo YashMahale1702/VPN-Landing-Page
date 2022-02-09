@@ -15,21 +15,27 @@
         <!-- Favicons -->
         <link rel="shortcut icon" type="image/x-icon" href="./Assets/favicon.ico">
 
-
     </head>
 
     <body>
-        <div class="container">
+        <div class="container" id="container">
+
+            <!-- icon for scroll up -->
+            <!-- <div class="scroll-up">
+                <button class="scroll-up_btn">&nbsp;</button>
+            </div> -->
+
+            <!-- Navbar -->
             <nav class="navbar">
                 <div class="navbar_logo">
                     <img src="" alt="" draggable="false" />
                 </div>
                 <div class="navbar_options">
-                    <a href="#">About</a>
-                    <a href="#">features</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Testimonials</a>
-                    <a href="#">Help</a>
+                    <a href="#container">About</a>
+                    <a href="#description">features</a>
+                    <a href="#cards-heading">Pricing</a>
+                    <a href="#world-heading">Testimonials</a>
+                    <a href="#customer-heading">Subscribe</a>
                 </div>
                 <div class="navbar_login">
                     <a href="#" class="login_btn">Login</a>
@@ -37,6 +43,8 @@
                 </div>
                 <!-- <img src="./Assets/Vector.png" alt="" class="navbar_menu"> -->
             </nav>
+
+            <!-- Header section image and content box -->
             <header class="header">
                 <div class="content-box">
                     <h1 class="primary-heading">
@@ -54,6 +62,9 @@
                     </figure>
                 </div>
             </header>
+
+
+            <!-- 3 info row -->
             <section class="infos">
                 <div class="info info_1">
                     <div class="info_img">
@@ -83,7 +94,10 @@
                     </div>
                 </div>
             </section>
-            <section class="description">
+
+
+            <!-- Description image and content box -->
+            <section class="description" id="description">
                 <div class="image-box">
                     <figure class="image-box_picture">
                         <img src="./Assets/Illustration 2.svg" alt="" class="image-box_img" draggable="false" />
@@ -113,13 +127,17 @@
                     </div>
                 </div>
             </section>
-            <section class="cards-heading">
+
+            <!-- Cars heading -->
+            <section class="cards-heading" id="cards-heading">
                 <h2 class="heading-tertiary">Choose your plan</h2>
                 <p class="paragraph">
                     Let's choose the package that is best for you and explore it
                     happily and cheerfully.
                 </p>
             </section>
+
+            <!-- Price cards using grid -->
             <section class="cards">
                 <div class="card">
                     <figure class="card-img_picture">
@@ -167,7 +185,9 @@
                     <a href="#" class="card-btn">Select</a>
                 </div>
             </section>
-            <section class="world-heading">
+
+            <!-- World map heading -->
+            <section class="world-heading" id="world-heading">
                 <h2 class="heading-tertiary">
                     Huge Global Network of Fast VPN
                 </h2>
@@ -176,12 +196,16 @@
                     move locations.
                 </p>
             </section>
+
+            <!-- World map image -->
             <section class="world">
                 <figure class="world_picture">
                     <img src="./Assets/global.svg" alt="Image" class="world_img" draggable="false" />
                 </figure>
             </section>
-            <section class="customer-heading">
+
+            <!-- Customer review heading -->
+            <section class="customer-heading" id="customer-heading">
                 <h2 class="heading-tertiary">
                     Trusted by Thousands of Happy Customer
                 </h2>
@@ -190,6 +214,8 @@
                     feature.
                 </p>
             </section>
+
+            <!-- Customer reviews cards using grid -->
             <section class="customer-cards">
                 <div class="customer-card">
                     <div class="row-first">
@@ -239,13 +265,17 @@
                     </div>
                 </div>
             </section>
+
+            <!-- Subscribe section -->
             <section class="subscribe">
                 <div class="subscribe-heading">
-                    <p class="subscribe-heading-first">Subscribe Now for Get Special Features!</p>
-                    <p class="subscribe-heading-second">Let's subscribe with us and find the fun.</p>
+                    <p class="subscribe-heading_first">Subscribe Now for Get Special Features!</p>
+                    <p class="subscribe-heading_second">Let's subscribe with us and find the fun.</p>
                 </div>
-                <button class="subscribe-btn">Subscribe</button>
+                <button class="subscribe_btn">Subscribe</button>
             </section>
+
+            <!-- Footer -->
             <footer class="footer">
                 <div class="footer-first">
                     <img src="./Assets/Logo.svg" alt="" srcset="">
@@ -269,6 +299,7 @@
                 </div>
             </footer>
         </div>
+
 
         <!-- script Tags -->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

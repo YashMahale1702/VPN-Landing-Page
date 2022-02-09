@@ -19,22 +19,22 @@
 		justify-content: start;
 		margin-right: 2rem;
 
-		&-first {
+		&_first {
 			font-size: 2rem;
 			font-weight: 600;
 			padding: 1rem 0;
 		}
 
-		&-second {
+		&_second {
 			font-size: 1.6rem;
 			font-weight: 400;
 		}
 	}
 
-	&-btn {
+	&_btn {
 		margin: 1.5rem 0;
 		font-weight: 400;
-		font-size: 1.8rem;
+		font-size: 1.7rem;
 		text-decoration: none;
 		text-transform: capitalize;
 		color: white;

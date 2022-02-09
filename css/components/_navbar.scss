@@ -40,9 +40,28 @@
 			opacity: 0.8;
 			outline: none;
 			text-decoration: none;
+			position: relative;
 
 			&:hover {
 				color: $primary-red;
+			}
+
+			// //* Special Animation
+			&:hover::after {
+				transform: scaleX(1);
+				transform-origin: center;
+			}
+
+			&::after {
+				content: '';
+				background-image: linear-gradient(to right, $primary-red, #d57eeb);
+				position: absolute;
+				height: 1.5px;
+				width: 100%;
+				bottom: 0;
+				left: 0;
+				transform: scaleX(0);
+				transition: all 0.4s ease;
 			}
 		}
 
@@ -69,19 +88,27 @@
 			font-weight: 500;
 			transform-origin: center;
 			position: relative;
+			background-size: 220%;
+			background-image: linear-gradient(115deg, transparent 0%, transparent 50%, black 50%);
+			transition: all 0.5s ease;
 			// border: 2px solid black;
-			transition: all 0.3s ease-in;
 
 			@include respond(phone) {
 				display: none;
 				opacity: 0;
 			}
 
-			&:hover {
+			&:hover,
+			&:active {
+				background-position: 100%;
 				color: white;
-				background-color: black;
-				box-shadow: 0 1rem 4rem rgba($color: black, $alpha: 0.1);
 			}
+
+			// &:hover {
+			// 	color: white;
+			// 	background-color: black;
+			// 	box-shadow: 0 1rem 4rem rgba($color: black, $alpha: 0.1);
+			// }
 		}
 
 		.signup_btn {
@@ -93,12 +120,20 @@
 			text-decoration: none;
 			font-size: 1.6rem;
 			font-weight: 500;
-			transition: all 0.3s ease-in;
+			background-size: 220%;
+			background-image: linear-gradient(115deg, transparent 0%, transparent 50%, $primary-red 50%);
+			transition: all .5s ease;
 
-			&:hover {
+			// &:hover {
+			// 	color: white;
+			// 	background-color: $primary-red;
+			// 	box-shadow: 0 1rem 4rem rgba($color: $primary-red, $alpha: 0.1);
+			// }
+
+			&:hover,
+			&:active {
+				background-position: 100%;
 				color: white;
-				background-color: $primary-red;
-				box-shadow: 0 1rem 4rem rgba($color: $primary-red, $alpha: 0.1);
 			}
 		}
 	}
