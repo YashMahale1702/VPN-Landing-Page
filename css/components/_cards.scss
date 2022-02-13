@@ -84,6 +84,10 @@
 			align-items: center;
 			margin-bottom: 1rem;
 
+			& > img {
+				margin-right: 1rem;
+			}
+
 			// &_tick {
 			// 	color: black;
 			// 	background-image: url('../../Assets/jam_check.svg');
