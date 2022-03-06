@@ -23,6 +23,8 @@
 		justify-content: center;
 		align-items: flex-start;
 		line-height: 1.4;
+		animation: fade-left 1s ease 0.8s;
+		animation-fill-mode: both;
 
 		& > * {
 			margin-bottom: 2.5rem;
@@ -62,6 +64,8 @@
 
 	.image-box {
 		grid-area: image;
+		animation: fade-down 1s ease 0.4s;
+		animation-fill-mode: both;
 
 		.image-box_picture {
 			width: 100%;
