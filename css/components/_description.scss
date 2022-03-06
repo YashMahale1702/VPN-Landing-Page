@@ -20,6 +20,8 @@
 
 	.image-box {
 		grid-area: image;
+		animation: fade-down 1s ease 1.2s;
+		animation-fill-mode: both;
 
 		.image-box_picture {
 			width: 100%;
@@ -49,6 +51,8 @@
 		justify-content: center;
 		align-items: flex-start;
 		padding: 0rem 8rem;
+		animation: fade-right 1s ease 1.2s;
+		animation-fill-mode: both;
 
 		@include respond(phone) {
 			padding: 0rem 4rem;
